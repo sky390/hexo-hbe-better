@@ -20,7 +20,7 @@
       "name": "Sky390"
     }
   ],
-  "name": "hexo-blog-encrypt",
+  "name": "hexo-hbe-better",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:sky390/hexo-hbe-better.git"
