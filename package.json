@@ -1,0 +1,36 @@
+{
+  "author": {
+    "name": "D0n9X1n & Sky390"
+  },
+  "bugs": {
+    "url": "https://github.com/sky390/hexo-hbe-better/issues"
+  },
+  "description": "Original Author: D0n9X1n. Yet, just another blog encrypt plugin for hexo.",
+  "homepage": "https://github.com/sky390/hexo-hbe-better/hexo-blog-encrypt#readme",
+  "keywords": [
+    "encrypt",
+    "blog",
+    "hexo"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "1103139039@qq.com",
+      "name": "Sky390"
+    }
+  ],
+  "name": "hexo-blog-encrypt",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:sky390/hexo-hbe-better.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js ./"
+  },
+  "version": "3.1.6",
+  "devDependencies": {
+    "eslint": "^6.2.2"
+  }
+}
