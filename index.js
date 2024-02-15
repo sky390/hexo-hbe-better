@@ -10,14 +10,14 @@ const log = hexo.log;
 const defaultConfig = {
   'abstract': 'Here\'s something encrypted, password is required to continue reading.',
   'message': 'Hey, password is required here.',
-  'theme': 'default',
+  'theme': 'wave',
   'wrong_pass_message': 'Oh, this is an invalid password. Check and try again, please.',
   'wrong_hash_message': 'OOPS, these decrypted content may changed, but you can still have a look.',
   'silent': false,
 };
 
-const keySalt = crypto.randomBytes(32);
-const ivSalt = crypto.randomBytes(32);
+const keySalt = textToArray('sky390-ak-ioi!');
+const ivSalt = textToArray('ioi-can-never-ak-sky390!');
 
 // As we can't detect the wrong password with AES-CBC,
 // so adding an empty tag and check it when decrption.
@@ -104,9 +104,7 @@ hexo.extend.filter.register('after_post_render', (data) => {
     .replace(/{{hbeHmacDigest}}/g, hmacDigest)
     .replace(/{{hbeWrongPassMessage}}/g, config.wrong_pass_message)
     .replace(/{{hbeWrongHashMessage}}/g, config.wrong_hash_message)
-    .replace(/{{hbeMessage}}/g, config.message)
-    .replace(/{{hbeKeySalt}}/g, keySalt.toString('hex'))
-    .replace(/{{hbeIvSalt}}/g, ivSalt.toString('hex'));
+    .replace(/{{hbeMessage}}/g, config.message);
   data.content += `<script data-pjax src="${hexo.config.root}lib/hbe.js"></script><link href="${hexo.config.root}css/hbe.style.css" rel="stylesheet" type="text/css">`;
   data.excerpt = data.more = config.abstract;
 
